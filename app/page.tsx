@@ -18,7 +18,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative overflow-hidden flex flex-col justify-center items-center w-full bg-linear-to-br from-purple-300 to-purple-500 text-white min-h-screen">
+    <div className="relative overflow-hidden flex flex-col justify-center items-center w-full bg-purple-500 text-white min-h-screen">
       <div className="relative h-52 sm:h-screen flex flex-col justify-center items-center w-full">
         <Image src={HappyBirthday} alt="" className="w-screen"></Image>
         <h2 className="text-[26vw] text-pink-300 z-20 absolute">Alyssa</h2>

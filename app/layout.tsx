@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Nunito_Sans, Mrs_Saint_Delafield } from "next/font/google";
 import "./globals.css";
 
@@ -14,6 +14,10 @@ const mrs_saint_delafield = Mrs_Saint_Delafield({
 export const metadata: Metadata = {
   title: "Happy Birthday, Alyssa!",
   description: "",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#9f7aea",
 };
 
 export default function RootLayout({
