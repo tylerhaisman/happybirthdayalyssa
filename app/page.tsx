@@ -3,11 +3,19 @@
 import Image from "next/image";
 import HappyBirthday from "../public/happy_birthday.png";
 import Alyssa from "../public/20241229_002839073_iOS.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Confetti from "react-confetti";
 
 export default function Home() {
   const [showImage, setShowImage] = useState(false);
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+
+  useEffect(() => {
+    setDimensions({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  }, []);
 
   return (
     <div className="relative overflow-hidden flex flex-col justify-center items-center w-full bg-linear-to-br from-purple-300 to-purple-500 text-white min-h-screen">
@@ -26,8 +34,8 @@ export default function Home() {
           className="z-40"
           gravity={0.3}
           recycle
-          width={window.innerWidth}
-          height={window.innerHeight}
+          width={dimensions.width}
+          height={dimensions.height}
         />
       </div>
       {showImage && (
