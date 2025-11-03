@@ -16,10 +16,6 @@ export const metadata: Metadata = {
   description: "",
 };
 
-export const viewport: Viewport = {
-  themeColor: "#9f7aea",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -27,6 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="theme-color" content="#9f7aea" />
+      </head>
       <body
         className={`${nunito_sans.variable} ${mrs_saint_delafield.variable} antialiased`}
       >
